@@ -1,0 +1,22 @@
+.root {
+  width: 100%;
+  padding: var(--space-1);
+  border-radius: var(--radius-full);
+  background: var(--overlay-light);
+  border: 1px solid var(--border-muted);
+  backdrop-filter: blur(var(--blur-overlay));
+}
+
+.option {
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.option[aria-checked='true'] {
+  background: linear-gradient(135deg, var(--glow-violet), var(--glow-cyan));
+  color: var(--text-primary);
+}

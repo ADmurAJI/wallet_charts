@@ -1,0 +1,199 @@
+:root {
+  --transition-base: 0.18s ease;
+}
+
+.ui-button,
+.ui-icon-button {
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  min-height: 2.75rem;
+}
+
+.ui-button:focus-visible,
+.ui-icon-button:focus-visible,
+.ui-segmented__option:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.ui-button[data-variant='primary'],
+.ui-icon-button[data-variant='primary'] {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--text-primary);
+  box-shadow: var(--shadow-cta);
+}
+
+.ui-button[data-variant='secondary'],
+.ui-icon-button[data-variant='secondary'] {
+  background-color: var(--overlay-light);
+  border-color: var(--border-muted);
+}
+
+.ui-button[data-variant='success'],
+.ui-icon-button[data-variant='success'] {
+  background: linear-gradient(
+    135deg,
+    var(--success-primary),
+    color-mix(in srgb, var(--success-primary) 70%, var(--accent-secondary))
+  );
+  color: var(--bg-primary);
+}
+
+.ui-button[data-variant='danger'],
+.ui-icon-button[data-variant='danger'] {
+  background: linear-gradient(
+    135deg,
+    var(--danger-primary),
+    color-mix(in srgb, var(--danger-primary) 70%, var(--accent-warm))
+  );
+  color: var(--text-primary);
+}
+
+.ui-button[data-variant='ghost'],
+.ui-icon-button[data-variant='ghost'] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-muted);
+}
+
+.ui-button[data-size='sm'] {
+  padding: var(--space-xs) var(--space-md);
+  min-height: 2.25rem;
+  font-size: 0.9rem;
+}
+
+.ui-button[data-size='lg'] {
+  padding: var(--space-md) var(--space-xl);
+  min-height: 3.25rem;
+  font-size: 1rem;
+}
+
+.ui-button[data-active='true'] {
+  box-shadow: var(--shadow-cta);
+  transform: translateY(-1px);
+}
+
+.ui-icon-button {
+  border-radius: var(--radius-md);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+}
+
+.ui-icon-button[data-size='sm'] {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.ui-icon-button[data-size='lg'] {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.ui-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ui-text {
+  margin: 0;
+  color: inherit;
+}
+
+.ui-text[data-variant='title'] {
+  font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ui-text[data-variant='subtitle'] {
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.ui-text[data-variant='body'] {
+  font-size: 1rem;
+}
+
+.ui-text[data-variant='caption'] {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ui-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  padding: var(--space-xs) var(--space-sm);
+  letter-spacing: 0.08em;
+}
+
+.ui-chip[data-tone='default'] {
+  background-color: var(--overlay-light);
+  color: var(--color-text);
+}
+
+.ui-chip[data-tone='success'] {
+  background-color: var(--success-tint);
+  color: var(--color-success);
+}
+
+.ui-chip[data-tone='danger'] {
+  background-color: var(--danger-tint);
+  color: var(--color-danger);
+}
+
+.ui-chip[data-tone='warning'] {
+  background-color: var(--warning-tint);
+  color: var(--color-warning);
+}
+
+.ui-segmented {
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: var(--radius-full);
+  background-color: var(--overlay-light);
+  padding: var(--space-xs);
+}
+
+.ui-segmented__option {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: var(--space-sm) var(--space-xl);
+  color: var(--color-muted);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.ui-segmented__option[aria-checked='true'] {
+  background-color: var(--overlay-strong);
+  color: var(--color-text);
+}

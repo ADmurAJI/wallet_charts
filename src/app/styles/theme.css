@@ -1,0 +1,88 @@
+:root {
+  color-scheme: dark;
+  --font-sans: 'Inter', 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  /* Color tokens */
+  --bg-primary: #05060f;
+  --bg-secondary: #0d101f;
+  --bg-tertiary: #13162b;
+  --surface-glass: rgba(15, 17, 36, 0.75);
+  --text-primary: #f5f7ff;
+  --text-secondary: #9ea8c7;
+  --accent-primary: #7c4dff;
+  --accent-secondary: #03dac6;
+  --accent-warm: #f8c572;
+  --success-primary: #1dd1a1;
+  --danger-primary: #ff6b6b;
+  --warning-primary: #feca57;
+  --chart-line: var(--accent-warm);
+  --chart-grid: rgba(255, 255, 255, 0.08);
+  --border-muted: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --overlay-light: rgba(255, 255, 255, 0.06);
+  --overlay-strong: rgba(255, 255, 255, 0.12);
+  --glow-violet: rgba(124, 77, 255, 0.25);
+  --glow-cyan: rgba(3, 218, 198, 0.2);
+  --success-tint: rgba(29, 209, 161, 0.15);
+  --danger-tint: rgba(255, 107, 107, 0.15);
+  --warning-tint: rgba(254, 202, 87, 0.15);
+  --shadow-cta: 0 10px 30px rgba(11, 12, 20, 0.45);
+  /* Radius tokens */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 999px;
+  /* Typography tokens */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+  /* Spacing tokens */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  /* Effects */
+  --shadow-card: 0 25px 60px rgba(5, 6, 18, 0.65);
+  --shadow-floating: 0 18px 40px rgba(10, 12, 32, 0.55);
+  --blur-overlay: 24px;
+  /* Legacy aliases */
+  --color-bg: var(--bg-primary);
+  --color-surface: var(--surface-glass);
+  --color-border: var(--border-muted);
+  --color-text: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-primary: var(--accent-primary);
+  --color-accent: var(--accent-secondary);
+  --color-success: var(--success-primary);
+  --color-danger: var(--danger-primary);
+  --color-warning: var(--warning-primary);
+  --chart-bull: var(--accent-secondary);
+  --chart-bear: var(--accent-warm);
+  --color-elevated: var(--surface-glass);
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-3);
+  --space-lg: var(--space-4);
+  --space-xl: var(--space-6);
+  --space-2xl: var(--space-7);
+  --space-3xl: var(--space-9);
+}
+
+[data-theme='dark'] {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.glass-card {
+  background: linear-gradient(130deg, var(--glow-violet), var(--glow-cyan)), var(--surface-glass);
+}
+
+.badge {
+  background: var(--overlay-light);
+}
